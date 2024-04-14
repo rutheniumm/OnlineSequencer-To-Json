@@ -70,7 +70,7 @@ function exportJson() {
         }
 
         for (const event of events) {
-            const delta = eventTime(event[0].time);
+            const delta = event[0].time;
             let pitch = map[event[0].type] + Math.round(instDetune / 100);
             if (map === midiNoteNamesToIndex) pitch -= 12;
 
